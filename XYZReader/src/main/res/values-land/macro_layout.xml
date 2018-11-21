@@ -1,0 +1,9 @@
+<resources>
+    <!-- list -->
+    <integer name="list_column_count">2</integer>
+
+    <!-- detail -->
+    <dimen name="detail_photo_height">224dp</dimen>
+    <bool name="detail_is_card">true</bool>
+    <dimen name="detail_card_max_width">540dp</dimen>
+</resources>
