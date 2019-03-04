@@ -75,16 +75,6 @@ public class ArticleDetailActivity extends AppCompatActivity implements
             postponeEnterTransition();
         }
 
-//        Bundle extras = getIntent().getExtras();
-//        if (savedInstanceState == null) {
-//            if (getIntent() != null && getIntent().getData() != null && extras != null) {
-//                mStartId = ItemsContract.Items.getItemId(getIntent().getData());
-//                imageTransitionName = extras.getString(ArticleListActivity.EXTRA_IMAGE_TRANSITION_NAME);
-//                Log.i(LOG_TAG, "onCreate: start id = " + mStartId);
-//                mSelectedItemId = mStartId;
-//            }
-//        }
-
 
         mPager = findViewById(R.id.pager);
 
@@ -208,11 +198,6 @@ public class ArticleDetailActivity extends AppCompatActivity implements
         }
     }
 
-//    @Subscribe(threadMode = ThreadMode.MAIN)
-//    public void onBodyDataLoaded(BodyDataLoaded event) {
-//
-//    }
-
     private void scheduleStartPostponedTransition(final View sharedElement) {
         sharedElement.getViewTreeObserver().addOnPreDrawListener(
                 new ViewTreeObserver.OnPreDrawListener() {
@@ -234,22 +219,4 @@ public class ArticleDetailActivity extends AppCompatActivity implements
         ColorUtils.RGBToHSL(red, green, blue, hsl);
         return hsl[2];
     }
-
-
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        // Check which request we're responding to
-//        if (requestCode == ArticleListActivity.GET_RETURNING_ARTICLE) {
-//
-//            // Check if request was successful
-//            if (resultCode == RESULT_OK) {
-//                Bundle bundle = new Bundle();
-//                bundle.putString(ArticleListActivity.EXTRA_IMAGE_TRANSITION_NAME,
-//                        ((ArticleDetailFragment)
-//                                mPagerAdapter
-//                                        .getItem(mCursor.getPosition())).getImageTransitionName());
-//                bundle.putInt(RETURNING_POSITION, mCursor.getPosition());
-//            }
-//        }
-//    }
 }
